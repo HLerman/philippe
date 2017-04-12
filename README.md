@@ -11,8 +11,9 @@ Change your shell prefix with a lot of movies quotes.
      git clone https://github.com/HLerman/philippe.git
      vim ~/.bashrc
 
-Add this line at the end of the file
+Add these lines at the end of the file
 
+     export QUOTE=/path/of/philippe/quote/
      PS1='$(perl /path/of/philippe/philippe.pl) :'
 
 Save and reload bashrc file.  
