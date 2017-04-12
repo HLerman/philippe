@@ -27,7 +27,7 @@ Create a new json file in the quote folder and use this template :
             "Seconde quote",
             "Thrid quote",
             "..."
-    ]
-}
+        ]
+    }
 
 Your file will be automatically used.
