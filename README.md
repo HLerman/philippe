@@ -13,7 +13,7 @@ Change your shell prefix with a lot of movies quotes.
 
 Add this line at the end of the file
 
-     PS1='$(perl /path/of/philippe/philippe.pl) '
+     PS1='$(perl /path/of/philippe/philippe.pl) :'
 
 Save and reload bashrc file.  
 

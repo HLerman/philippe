@@ -3,8 +3,9 @@ use strict;
 use warnings;
 use Encode qw(encode_utf8);
 use JSON::PP;
+use Env qw(PATH SYSTEMROOT);
 
-my $quoteFolder = './quote/';
+my $quoteFolder = $ENV{'QUOTE'};
 
 opendir(my $dh, $quoteFolder) or die "Cannot access to the quote folder $quoteFolder";
 my @files = grep { /\.json$/ } readdir($dh);
@@ -19,7 +20,7 @@ if(not -z "$quoteFolder$file")
             $json .= $l;
         }
         $json = decode_json encode_utf8($json);
-        print $json->{'quote'}[rand(scalar(@{$json->{'quote'}}))]."\n";
+        print $json->{'quote'}[rand(scalar(@{$json->{'quote'}}))];
     close($fh);
 }
 else
